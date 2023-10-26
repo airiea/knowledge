@@ -16,7 +16,7 @@
     <name>knowledge</name>
 
     <modules>
-        <module>dao</module>
+        <module>repository</module>
         <module>model</module>
         <module>common</module>
     </modules>

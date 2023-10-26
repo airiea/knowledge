@@ -8,7 +8,7 @@
         <version>1</version>
     </parent>
 
-    <artifactId>dao</artifactId>
+    <artifactId>repository</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
