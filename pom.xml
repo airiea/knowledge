@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>airiea</artifactId>
+        <groupId>com.airiea</groupId>
+        <version>1</version>
+    </parent>
+
+    <groupId>com.airiea.knowledge</groupId>
+    <artifactId>knowledge</artifactId>
+    <version>1</version>
+    <packaging>pom</packaging>
+
+    <name>knowledge</name>
+
+    <modules>
+        <module>dao</module>
+        <module>model</module>
+        <module>common</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <java.version>17</java.version>
+
+        <com.amazonaws.version>1.12.504</com.amazonaws.version>
+        <com.fasterxml.jackson.core.version>2.15.2</com.fasterxml.jackson.core.version>
+
+        <com.airiea.openaimodel.version>1.0.0</com.airiea.openaimodel.version>
+        <com.airiea.old.version>1.0.0</com.airiea.old.version>
+
+        <org.junit.jupiter.version>5.10.0</org.junit.jupiter.version>
+        <org.mockito.version>5.4.0</org.mockito.version>
+        <org.projectlombok.version>1.18.28</org.projectlombok.version>
+        <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.airiea</groupId>
+                <artifactId>openai-model</artifactId>
+                <version>${com.airiea.openaimodel.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.airiea</groupId>
+                <artifactId>airiea-dao</artifactId>
+                <version>${com.airiea.old.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-sns</artifactId>
+                <version>${com.amazonaws.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-dynamodb</artifactId>
+                <version>${com.amazonaws.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${com.fasterxml.jackson.core.version}</version>
+                <scope>compile</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>${org.junit.jupiter.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-junit-jupiter</artifactId>
+                <version>${org.mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${org.projectlombok.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${org.mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${org.mapstruct.version}</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
