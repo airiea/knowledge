@@ -24,6 +24,9 @@ public class KnowledgeDTO {
 
     String content;
 
+    @JsonProperty("content_max_tokens")
+    String contentMaxTokens;
+
     @JsonProperty("created_date")
     Date createdDate;
 

@@ -31,6 +31,10 @@ public class KnowledgeDAO {
     @DynamoDBAttribute(attributeName = "content")
     String content;
 
+    @DynamoDBAttribute(attributeName = "content_max_tokens")
+    @JsonProperty("content_max_tokens")
+    String contentMaxTokens;
+
     @DynamoDBAttribute(attributeName = "embedding")
     List<Double> embedding;
 
